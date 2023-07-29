@@ -2,7 +2,7 @@ import * as React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { fetchList } from '../api/fetchlist';
+import { fetchList } from '../service/api';
 import { CollectionItem } from '../interfaces/global';
 import { Backdrop, CircularProgress } from '@mui/material';
 import CollectionsContainer from '../components/CollectionsContainer';

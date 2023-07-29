@@ -9,6 +9,12 @@ export async function fetchList(search="",page=1):Promise<{items:Array<Collectio
     if(search)
         query.append("q",search);
     const {data}=await axios.get(`https://www.rijksmuseum.nl/api/nl/collection?${query.toString()}`);
-    console.log(data);
     return {items:data.artObjects,total:data.count,countPage:Math.floor(data.count/9)+1, currentPage:page};
+}
+
+export const fetchOne=async (id:string)=>{
+    let query=new URLSearchParams();
+    query.append("key",process.env.API_KEY?.toString()??apiKey);
+    const {data}=await axios.get(`https://www.rijksmuseum.nl/api/nl/collection/${id}?${query.toString()}`);
+    return data;
 }

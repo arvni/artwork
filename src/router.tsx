@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
+import Collection from "./pages/Collection";
 
 
 export default function Router(){
@@ -11,6 +12,7 @@ export default function Router(){
         <Route path="/" element={<Layout/> }>
             <Route index element={<Home/>}/>
             <Route path="/search" element={<Search/>}/>
+            <Route path="collections/:id" element={<Collection/>}/>
         </Route>
     </Routes>
     </BrowserRouter>

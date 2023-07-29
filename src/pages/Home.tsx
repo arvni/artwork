@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import ProTip from '../components/ProTip';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { CollectionItem } from '../interfaces/global';
-import { fetchList } from '../api/fetchlist';
+import { fetchList } from '../service/api';
 import CollectionsContainer from '../components/CollectionsContainer';
 import { Backdrop, CircularProgress } from '@mui/material';
 

@@ -30,3 +30,14 @@ export interface WrapperProps {
         headerImage: Image,
         productionPlaces: []
   }
+
+  export interface CollectionInterface{
+    label:{
+        description:string,
+    makerLine:string,
+    notes:string,
+    title:string,
+    }
+    webImage:Image,
+    subTitle:string
+}

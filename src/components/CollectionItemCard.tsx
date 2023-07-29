@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Card, CardContent, CardHeader, CardMedia, Typography } from '@mui/material';
 import { CollectionItem } from '../interfaces/global';
+import { Link } from 'react-router-dom';
 
 const CardHeaderTitle=({title}:{title:string})=><Box sx={{
     padding: "4px 8px 4px 8px",
@@ -12,7 +13,7 @@ const CardHeaderTitle=({title}:{title:string})=><Box sx={{
 }}>{title}</Box>
 
 export default function CollectionItemCard({item}:{item:CollectionItem}){
-    return  <Card sx={{
+    return  <Link to={`/collections/${item.objectNumber}`} style={{textDecoration:"none"}}><Card sx={{
         maxWidth:"450px",
         height:"364px", 
         display:"flex",
@@ -35,5 +36,5 @@ export default function CollectionItemCard({item}:{item:CollectionItem}){
     <CardContent sx={{zIndex:100}}>
       <Typography gutterBottom variant="h5" component="div"color={"#C4C4C4"} fontSize={"32px"} lineHeight={"40px"}>{item.title}</Typography>
     </CardContent>
-  </Card>;
+  </Card></Link>;
 }
