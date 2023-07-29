@@ -1,5 +1,3 @@
-# Material UI - Create React App example in TypeScript
-
 ## How to use
 
 Download 
